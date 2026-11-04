@@ -17,10 +17,14 @@
 <meta name="author" content="Bereket Derese">
 
 
+
 </head>
 
 <body>
   
+    <canvas id="logo" width="120" height="120">
+        Bereket Derese logo
+    </canvas>
 
     <h1>Bereket Derese</h1>
     
@@ -32,6 +36,8 @@
 
 
     <p>Software Engineering student and aspiring web developer.</p>
+
+
 
 
 
@@ -68,7 +74,9 @@ onclick="document.getElementById('hireDialog').showModal()">
     <a href="#projects">Projects</a> |
     <a href="#education">Education</a> |
     <a href="#contact">Contact</a> |
-    <a href="./project.html">All Projects</a>
+    <a href="./project.html">All Projects</a>|
+    <a href="thank-you.html">Thank You</a>
+
 </nav>
 
 <hr>
@@ -611,9 +619,30 @@ for i in range(3):<br><br>
 
     <footer>
 <p>Copyright &copy; 2026 Bereket Derese. All rights reserved.</p>
+<p>Last updated: <time datetime="2026-11-05">5 November 2026</time></p>
 </footer>
 
-<p>Last updated: <time datetime="2026-11-05">5 November 2026</time></p>
+
+
+<script>
+    const canvas = document.getElementById('logo');
+    const logoCtx = canvas.getContext('2d');
+
+    logoCtx.fillStyle = "#1f5fa8";
+    logoCtx.fillRect(0, 0, 120, 120);
+
+    logoCtx.beginPath();
+    logoCtx.arc(60, 60, 45, 0, 2 * Math.PI);
+    logoCtx.fillStyle = "white";
+    logoCtx.fill();
+
+    logoCtx.fillStyle = "#1f5fa8";
+    logoCtx.font = "bold 36px Arial";
+    logoCtx.textAlign = "center";
+    logoCtx.textBaseline = "middle";
+    logoCtx.fillText("BD", 60, 62);
+</script>
+
 </body>
 
 </html>
