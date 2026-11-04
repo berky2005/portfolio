@@ -32,6 +32,35 @@
 
 
     <p>Software Engineering student and aspiring web developer.</p>
+
+
+
+    
+<button type="button"
+onclick="document.getElementById('hireDialog').showModal()">
+    Hire me
+</button>
+
+<dialog id="hireDialog">
+    <h2>Available for internships</h2>
+
+    <p>I am available for internships and freelance web projects.</p>
+
+    <p>
+        <a href="#contact">Send me a message</a>
+        or
+        <a href="files/cv.pdf" download>Download my CV</a>.
+    </p>
+
+    <button type="button"
+    onclick="document.getElementById('hireDialog').close()">
+        Close
+    </button>
+</dialog>
+
+
+
+
     
 <nav>
     <a href="#about">About</a> |
@@ -140,6 +169,57 @@ One of my favourite books is Clean Code by Robert C. Martin.</p>
         </ul>
     </li>
 </ul>
+
+
+
+
+
+
+<h3>Skill Levels</h3>
+
+<p>
+    <label for="lvl-html">HTML</label>
+    <meter id="lvl-html" value="0.8" min="0" max="1">
+        80%
+    </meter>
+</p>
+
+<p>
+    <label for="lvl-python">Python</label>
+    <meter id="lvl-python" value="0.7" min="0" max="1">
+        70%
+    </meter>
+</p>
+
+<p>
+    <label for="lvl-js">JavaScript</label>
+    <meter id="lvl-js" value="0.2" min="0" max="1"
+    low="0.3" high="0.7" optimum="1">
+        20%
+    </meter>
+</p>
+
+
+<canvas id="chart" width="300" height="150"></canvas>
+
+<script>
+const chart = document.getElementById("chart");
+const ctx = chart.getContext("2d");
+
+ctx.fillStyle = "blue";
+
+ctx.fillRect(30, 20, 44, 85);
+ctx.fillText("HTML", 38, 120);
+
+ctx.fillRect(113, 30, 44, 75);
+ctx.fillText("Python", 110, 120);
+
+ctx.fillRect(196, 82, 44, 23);
+ctx.fillText("JavaScript", 190, 120);
+</script>
+
+
+
 <h2>My Learning Roadmap</h2>
 
 <ol>
@@ -227,6 +307,13 @@ for i in range(3):<br><br>
     <h3>BSc in Software Engineering</h3>
     <p>Addis Ababa Science and Technology University, 2023 – present</p>
     <p>Accademic Record BSc in Software Engineering</p>
+
+    <p>
+<label for="degree">Degree progress:</label>
+<progress id="degree" value="40" max="100">40%</progress> 40%
+</p>
+
+
 </section>
 
     <section id="education">
